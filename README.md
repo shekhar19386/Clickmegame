@@ -1,5 +1,10 @@
-Node-Ejs Example with count my click game
-=========================================
+
+
+Node(Express) + Ejs(templating) + MongoDB(database) Example
+===========================================================
+
+Game to count my clicks
+=======================
 
 This is an example of NodeJS with ejs templating for small game to count no of clicks. You can add more features in it. this is just for an example.
 
