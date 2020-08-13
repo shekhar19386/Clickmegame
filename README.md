@@ -1,7 +1,7 @@
 
 
-Node(Express) + Ejs(templating) + MongoDB(database) Example
-===========================================================
+Nodejs (Express) + ejs (template) + MongoDB (database) Example
+==============================================================
 
 Game to count my clicks
 =======================
@@ -26,4 +26,8 @@ Now you can access it on browser with given URL
 
 <pre>localhost:8080</pre>
 
+Thank you for commin on my profile
+==================================
+
+NOTE:- If you have any query about setup the project you can reach me out any time.
 
