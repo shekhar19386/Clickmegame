@@ -1,8 +1,54 @@
 <meta charset="UTF-8">
-<title>Super Awesome</title>
+<title>GAME By Weberszone</title>
 
 <!-- CSS -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<style>
-	body 	{ padding-top:50px; }
-</style>
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="/js/custom.js"></script>
+
+<% if (pageslug == 'home') { %>
+<script>
+$(document).ready(function(){    
+    toggle_visibility('user-popup');  
+});
+</script>
+<% } %>
+
+<% if (pageslug == 'game-room') { %>
+<script>
+$(document).ready(function(){    
+    var timeleft1 = 3;
+    var downloadTimer = setInterval(function(){
+    if(timeleft1 <= 0){
+        clearInterval(downloadTimer);
+        // document.getElementById("countdown").innerHTML = "Finished";
+        window.location.href="/play-game";
+    } else {
+        document.getElementById("countdown").innerHTML = timeleft1;
+    }
+    timeleft1 -= 1;
+    }, 1000);
+});
+</script>
+<% } %>
+
+<% if (pageslug == 'play-game') { %>
+<script>
+$(document).ready(function(){    
+    var timeleft2 = 10;
+    var downloadTimer = setInterval(function(){
+    if(timeleft2 <= 0){
+        clearInterval(downloadTimer);
+        // document.getElementById("countdown1").innerHTML = "Finished";
+        document.getElementById("clickbox").style.display = "none";
+        savenoofclicks();
+    } else {
+        document.getElementById("countdown1").innerHTML = timeleft2;
+    }
+    timeleft2 -= 1;
+    }, 1000);
+});
+</script>
+<% } %>

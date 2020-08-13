@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include ../partials/head %>
+</head>
+<body class="container">
+
+	<header>
+		<% include ../partials/header %>
+	</header>
+	
+	<main>
+		<div class="main-container">	
+			<a href="/game-room" class="btn btn-primary">Start Game</a>	
+			<a href="/logout" class="btn btn-primary pull-right">Logout</a>				
+			<hr>
+			<div class="container bootstrap snippets bootdey">										
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="main-box no-header clearfix">
+							<div class="main-box-body clearfix">
+								<div class="table-responsive">
+									<table class="table user-list">
+										<thead>
+											<tr>
+												<th><span>User Name</span></th>
+												<th><span>Game Played At</span></th>
+												<th class="text-center"><span>Score</span></th>											
+											</tr>
+										</thead>
+										<tbody>
+											<%for (var result in allusersdata){%>
+												<tr>
+													<td><a href="javascript:void(0);" title="<%=allusersdata[result].userdata[0]._id%>" class="user-link"><%=allusersdata[result].userdata[0].userName%></a></td>
+													<td><%= new Date(allusersdata[result].createdAt).toUTCString() %></td>
+													<td class="text-center"><span class="label label-default"><%=allusersdata[result].userScore%></span></td>												
+												</tr>
+												
+											<%}%>												
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+	
+</body>
+</html>

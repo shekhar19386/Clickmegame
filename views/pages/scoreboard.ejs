@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include ../partials/head %>
+</head>
+<body class="container">
+
+	<header>
+		<% include ../partials/header %>
+	</header>
+	
+	<main>
+		<div class="main-container">
+			<a href="/lobby" class="btn btn-primary">Go to lobby</a>
+			<a href="/game-room" class="btn btn-primary">Play Again</a>	
+			<a href="/logout" class="btn btn-primary pull-right">Logout</a>	
+			<hr>
+			<div class="container bootstrap snippets bootdey">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="main-box no-header clearfix">
+							<div class="main-box-body clearfix">
+								<div class="table-responsive">
+									<table class="table user-list">
+										<thead>
+											<tr>
+												<th><span>User Name</span></th>
+												<th><span>Game Played At</span></th>
+												<th class="text-center"><span>Score</span></th>											
+											</tr>
+										</thead>
+										<tbody>
+											<%for (var result in scoreboarddata){%>																	
+												<tr>
+													<td><a href="javascript:void(0);" title="<%=scoreboarddata[result].userdata[0]._id%>" class="user-link"><%=scoreboarddata[result].userdata[0].userName%></a></td>
+													<td><%= new Date(scoreboarddata[result].createdAt).toUTCString() %></td>
+													<td class="text-center"><span class="label label-default"><%=scoreboarddata[result].userScore%></span></td>												
+												</tr>
+											<%}%>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+	
+</body>
+</html>
