@@ -17,4 +17,8 @@ Then go to terminal and run
 
 <pre>node server.js</pre>
 
+Now you can access it on browser with given URL
+
+<pre>localhost:8080</pre>
+
 
