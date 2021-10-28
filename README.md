@@ -26,7 +26,7 @@ Now you can access it on browser with given URL
 
 <pre>localhost:8080</pre>
 
-Thank you for commin on my profile
+Thank you for visiting my profile
 ==================================
 
 NOTE:- If you have any query about setup the project you can reach me out any time.
